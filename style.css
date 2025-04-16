@@ -1,0 +1,118 @@
+body {
+    background-image: url('./images/coffee2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}    
+    
+#loginFormContainer {
+    display:flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginContainer {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputLoginPadding {
+    margin-bottom: 5px;
+    margin-top: 20px;
+    
+}
+
+.inputLoginStyle {
+    padding: 10px 100px 10px 10px;
+    border: 2px solid burlywood;
+    box-shadow: inset 1px 1px 1px 1px black;
+    border-radius: 25px;
+}
+
+#signUpLink {
+    color:burlywood;
+    text-decoration: none;
+}
+
+input.inputLoginStyle::placeholder {
+    font-weight: bold;
+    color:black;
+}
+
+.loginBackground {
+    display:flex;
+    flex-direction: column;
+    height: 450px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px 30px 0 30px;
+    border-radius: 25px;  
+}
+
+h1 {
+    color:white;
+    margin-top: 80px;
+}
+
+#loginSubmitButton {
+    background-color:cornsilk;
+    font-weight: bold;
+    color:black;
+    padding: 10px 50px;
+    border: 3px solid burlywood;
+    border-radius: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#signUpLabel {
+    color: white;
+    margin-right: 3px;
+}
+
+#signupLinkContainer {
+    margin-top: 10px;
+}
+
+.password-wrap {
+    position: relative;
+}
+
+#toggle-passwd {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translatey(-50%);
+    cursor: pointer;
+    width: 1.5rem;
+    height:20px;
+    display:flex;
+    align-items: center;
+    border: none;
+    background-color: white;
+}
+
+.labelStyle {
+
+    font-weight: bold;
+    margin: 3px 0 2px 3px; 
+    color: burlywood;
+    
+}
+
+#limparTela {
+    font-weight: bold;
+    color:black;
+    height: 41px;
+    width: 146.77px;
+    background-color: white;
+    padding: 10px 30px 10px 30px;
+    border: 3px solid burlywood;
+    border-radius: 25px;
+    margin: 20px 0 0 4px;
+    cursor: pointer;
+} 
+

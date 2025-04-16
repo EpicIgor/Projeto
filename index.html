@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar conta | Cafeinados</title>
+    <link rel="icon" type="image/x-icon" href="/images/Logo.png">
+    <link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+
+    <main id="signupContainer">
+        <form id="signupForm">    
+
+            <div id="titleContainer">
+                <img src="./images/Logo.png" height="50px"/>
+                <div>
+                    <h1>Crie sua conta</h1>
+                    <p id="headingParagraph">Crie sua conta pra continuar</p>
+                </div>
+            </div>
+            
+
+               <div id="dadosPessoaisContainer">
+
+                    <h2>Dados Pessoais:</h2>
+
+                    <label class="labelStyle">Nome Completo</label>
+                    <input type="text" id="nomeCompleto" name="nome"  maxlength="80" placeholder="Nome completo" class="inputStyle" required/>
+                    <span id="fName" class="spanStyle"></span>
+
+                    <label class="labelStyle">Data de Nascimento</label>
+                    <input type="date" id="aniversario" name="aniversario" class="inputStyle" required/>
+           
+                    
+                    <div id="checkboxContainer">
+
+                        <div id="checkTitleContainer">
+                            <label class="checkboxLabel" id="checkTitle">Gênero</label>
+                        </div>
+                        
+                        <input type="radio" name="genero" value="homem" class="checkboxConfig" id="homem"/>
+                        <label class="checkboxLabel" for="homem">Homem</label>
+
+                        <input type="radio" name="genero" value="mulher" class="checkboxConfig" id="mulher"/>
+                        <label class="checkboxLabel" for="mulher">Mulher</label>
+
+                        <input type="radio" name="genero" value="nao informado" class="checkboxConfig" id="nao-informado"/>
+                        <label class="checkboxLabel" for="nao-informado">Prefiro Não Informar</label>
+              
+                    </div>
+
+                    <label class="labelStyle">Nome da Mãe</label>
+                    <input type="text" name="mae" placeholder="Nome da mãe" class="inputStyle" required/>
+
+                    <label class="labelStyle">CPF</label>
+                    <div id="cpfInputContainer">
+                        <input type="text" id="cpf" name="cpf" placeholder="CPF" maxlength="14" class="inputStyle" onkeyup="cpfConfig(event)" required/>
+                        <span id="cpfError" class="spanStyle"></span>
+                    </div>
+
+                    <label class="labelStyle">Email</label>
+                    <input type="email" name="email" placeholder="Email" class="inputStyle" required/>
+            
+
+                    <label class="labelStyle">Celular</label>
+                    <input type="tel" id="celular" name="celular" maxlength="18" onkeyup="phoneConfig(event)"  placeholder="(+55) xx-xxxxxxxxx" class="inputStyle" required/>
+
+                    <label class="labelStyle">Telefone Fixo</label>
+                    <input type="tel" id="telefone" name="telefone" maxlength="17" onkeyup="phoneConfig(event)" placeholder="(+55) xx-xxxxxxxx" class="inputStyle"/>
+                    <span class="spanStyle">(Opicional)</span>
+                   
+                 </div>  
+        
+         
+            <div id="enderecoContainer">
+
+                <h2>Endereço:</h2>
+
+                <label class="labelStyle">CEP</label>
+                <input type="text" id="cep" name="cep" maxlength="9" placeholder="CEP:" class="inputStyle" required/>
+                <span id="cepError" class="spanStyle"></span>
+
+                <label class="labelStyle">Endereço</label>
+                <input type="text" id="rua" name="rua" placeholder="Rua:" class="inputStyle" required/>
+                
+                <label class="labelStyle">Número</label>
+                <input type="number" name="numeroDaRua" placeholder="Número:" class="inputStyle"/>
+                <span class="spanStyle">(Opicional)</span>
+                
+                <label class="labelStyle">Complemento</label>
+                <input type="text" id="complemento" name="complemento" placeholder="complemento" class="inputStyle"/>
+                <span class="spanStyle">(Opicional)</span>
+                
+                <label class="labelStyle">Bairro</label>
+                <input type="text" id="bairro" name="bairro" placeholder="bairro" class="inputStyle" required/>
+                
+                <label class="labelStyle">Cidade</label>
+                <input type="text" id="cidade" name="cidade" placeholder="Cidade:" class="inputStyle"  required/>
+               
+                <label class="labelStyle">Login</label>
+                <input type="text" id="login" name="login" minlength="6" maxlength="6" onblur="loginRequirement()" placeholder="login:" class="inputStyle"  required/>
+                <span id="loginSpan" class="spanStyle">(O login deve conter 6 caracteres alfabéticos)</span>
+                
+                <label class="labelStyle">Senha</label>
+                <div class="password-wrap">
+                    <input type="password" id="senha" name="senha" minlength="8" maxlength="8"  onblur="passwordRequirement('senha','passwrdRequirementId')" placeholder="senha:" class="inputStyle"  required/>
+                    <button type="button" class="toggle-passwd" onclick="showPassword('senha','toggle-img')">
+                        <img src="./images/visibilityOff.svg" id="toggle-img"/>
+                    </button>
+                </div>
+                <span id="passwrdRequirementId" class="spanStyle">(A senha deve conter 8 caracteres alfabéticos)</span>
+                
+                <label class="labelStyle">Confirmar Senha</label>
+                <div class="password-wrap">
+                    <input type="password" id="senhaConfirm" name="senhaconfirm" minlength="8" maxlength="8" onblur="passwordRequirement('senhaConfirm', 'spanConfirm')" placeholder="senha:" class="inputStyle" required/>
+                    <button type="button" class="toggle-passwd" onclick="showPassword('senhaConfirm', 'toggle-imgConfirm')">
+                        <img src="./images/visibilityOff.svg" id="toggle-imgConfirm"/>
+                    </button>
+                </div>
+                <span class="spanStyle" id="spanPasswrd"></span>
+                <span class="spanStyle" id="spanConfirm"></span>
+            
+            </div>
+
+            <div id="loginLinkContainer">
+                <label id="loginLabel">Já tem conta?</label>
+                <a href= "./login.html" id="loginLink">Login</a>
+            </div>
+           
+            <div>
+                <input type="submit" value="Enviar" id="signupButton">
+                <button type="button" id="limparTelaSignup">Limpar Tela</button>
+            </div>
+        
+        </form>
+    </main>
+
+    <script src="./index.js"></script>
+    
+</body>
+</html>
